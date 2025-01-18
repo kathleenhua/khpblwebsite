@@ -1,6 +1,8 @@
 :root {
-  --yellow: #ffc107;
+  --yellow: #2d2d50;
+  --highlight: #279AF1;
   --muted-white: #aaaaaa;
+  --beige: #edede9;
   --dark: #242627;
   --nav-height: 50px;
 }
@@ -11,9 +13,14 @@
   }
 }
 
+.display-4 {
+  color: var(--yellow);
+  font-weight: 500;
+}
+
 body {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-family: "Segoe UI",Roboto,"Open Sans",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
@@ -32,16 +39,17 @@ body {
 }
 
 .black-navbar {
-  background: black !important;
+  background: var(--beige) !important;
+
 }
 
 nav {
   transition: all 0.3s ease;
-  background: black;
+  /* background: red; */
 }
 
 .navbar-dark .navbar-nav .nav-item.active .nav-link {
-  color: #fff;
+  color: white;
 }
 
 @media (min-width: 768px) {
@@ -78,8 +86,8 @@ button {
 
 .footer p {
   margin-bottom: 0;
-  color: #999;
-  background: #111;
+  color: white;
+  background: var(--muted-white);
 }
 
 .footer-icon-link {
@@ -88,7 +96,7 @@ button {
 
 .footer-text {
   font-size: 0.90rem;
-  color: #AAAAAA
+  color: #999;
 }
 
 .footer-text2 {
@@ -104,7 +112,7 @@ button {
 .dropdown-menu {
   border: white 2px solid;
   border-top: 0;
-  background-color: black;
+  background-color: var(--yellow);
 }
 
 .dropdown-item {
@@ -112,8 +120,8 @@ button {
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
-  background-color: var(--yellow);
-  color: black;
+  background-color: white;
+  color: var(--yellow);
 }
 
 .nav-item {
@@ -141,7 +149,7 @@ button {
     height: calc(var(--nav-height) - 100%);
     left: 50%;
     bottom: calc(100% + 1px); /* + 1px to fix rounding issues */
-    border-right: var(--yellow) 1px solid;
+    border-right: var(--highlight) 1px solid; /* change color rn */
     position: absolute;
     transform: translateY(-100%);
     transition: 0.2s ease;
@@ -287,7 +295,7 @@ svg {
 
 
 .banner {
-
+  background-color: --yellow;
 }
 
 .video-banner {
@@ -315,7 +323,9 @@ svg {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
-    background: #000;
+    background: white;
+    color: black;
+    box-shadow: var(--yellow) 5px 5px;
 }
 
 @media (min-width: 992px) {
@@ -342,14 +352,18 @@ svg {
   background-position: center center;
   -webkit-background-size: cover;
   background-size: cover;
+  /* background-color: var(--yellow); */
 }
 
 .whatwedo-background {
   background-image: url("../img/whatwedo.jpg");
+  background-color: #edede9;
+
 }
 
 .whypbl-background {
   background-image: url("../img/whypbl.jpg");
+  background-color: white;
 }
 
 .orgstructure-background {
@@ -499,7 +513,7 @@ svg {
   font-weight: bold;
   border-left: 3px solid;
   padding-left: 7px;
-  color: var(--yellow);
+  color: var(--highlight);
 }
 
 #spy a.nav-link::before {
@@ -511,7 +525,7 @@ svg {
 }
 
 #spy a.nav-link:hover {
-  border-left: var(--yellow) 2px solid;
+  border-left: var(--highlight) 2px solid; 
   padding-left: 8px;
 }
 
@@ -749,7 +763,7 @@ svg {
   margin: auto;
   position: relative;
   border-radius: 100%;
-  background: #ffc107;
+  background: #113255;
   content: "";
   display: block;
 }
@@ -765,14 +779,14 @@ svg {
   margin: auto;
   position: relative;
   border-radius: 100%;
-  background: #ffc107;
+  background: #113255;
   content: "";
   display: block;
 }
 
 /* vertical line */
 .client-timeline-marker::after {
-  background-color: #ffc107;
+  background-color: #113255;
   content: "";
   width: 3px;
   left: 0;
@@ -786,7 +800,7 @@ svg {
 }
 
 .client-timeline-marker-last::after {
-  background-color: #ffc107;
+  background-color: #113255;
   content: "";
   width: 3px;
   left: 0;
@@ -823,9 +837,9 @@ svg {
   justify-content: center;
   text-decoration: none;
   font-size: 26px;
-  color: #fff;
+  color: #000;
   border-radius: 50%;
-  outline: 2px solid #fff;
+  outline: 2px solid #000;
   transition-property:
   outline-offset, outline-color,
   background-color;
@@ -834,7 +848,7 @@ svg {
 
 .icon:hover {
   outline-offset: 4px;
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
@@ -877,8 +891,8 @@ svg {
   cursor: pointer;
   padding: 7px 10px;
   transition: 0.3s;
-  color: #ffffff;
-  border-right: 1px solid #ffffff;
+  color: #000000;
+  border-right: 1px solid #000000;
   line-height: 1px;
 }
 
@@ -898,7 +912,7 @@ svg {
 
 /* Create an active/current tablink class */
 .tab button.active {
-  color: #ffc107;
+  color: white;
 }
 
 /* Style the tab content */
@@ -907,7 +921,7 @@ svg {
   padding: 6px 12px;
   border: 1px solid #000000;
   border-top: none;
-  color: #ffffff;
+  color: #000000;
 }
 
 .tabcontent {
@@ -921,7 +935,7 @@ svg {
 }
 
 #box {
-  background-color: #ffc107;
+  background-color: var(--yellow);
   padding: 5px;
   color: #000000;
   font-weight: bold;
@@ -929,11 +943,11 @@ svg {
 }
 
 hr.new1 {
-  border: 1px solid #ffc107;
+  border: 1px solid #113255;
 }
 
 .header2 {
-  color: #ffc107;
+  color: var(--yellow);
   font-size: 1.6rem;
   font-weight: lighter;
 }
@@ -1002,4 +1016,20 @@ h1 span{font-weight:normal}
 .abt {
   padding-top: calc(var(--nav-height) + 15px);
   margin-bottom: calc(var(--nav-height) / 2);
+}
+
+.btn-outline-warning {
+  color: white; /* New text color */
+  border-color: white; /* New border color */
+  border-radius: 5px;
+}
+
+.btn-outline-warning:hover {
+  color: white; /* Text color on hover */
+  background-color: var(--yellow); /* New background color on hover */
+  border-color: var(--yellow)
+}
+
+#why-pbl {
+  padding-top: 300px;
 }
