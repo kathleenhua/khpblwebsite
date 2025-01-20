@@ -1,7 +1,8 @@
 :root {
   --yellow: #2d2d50;
+  --light-blue: #c9d1ff;
   --highlight: #279AF1;
-  --muted-white: #d4d3d6;
+  --muted-white: #bcbcbf;
   --beige: #edede9;
   --darker-beige: #d7d9db;
   --footer-color: #1d1d33;
@@ -21,7 +22,7 @@
 }
 
 html {
-  height: 100%; /* getting rid of gray gap under footer */
+  height: 100%; /* getting rid of gap under footer */
 }
 
 body {
@@ -60,8 +61,28 @@ nav {
   /* font-weight: bold; */
 }
 
+#spy .officer-nav a.nav-link.active, #spy a.nav-link.active:hover {
+  color: var(--yellow);
+}
+
+.officer-nav .navbar-dark .navbar-nav .nav-item.active .nav-link {
+  color: var(--yellow);
+  /* font-weight: bold; */
+}
+
 .navbar-dark .navbar-nav .nav-link {
   color: var(--beige);
+}
+
+
+/* committees sidebar nav links */
+.committees-background .navbar-dark .navbar-nav .nav-item.active .nav-link {
+  color: white;
+  
+}
+
+.committees-background .navbar-dark .navbar-nav .nav-link :active {
+  color: white;
 }
 
 @media (min-width: 768px) {
@@ -125,17 +146,18 @@ button {
 
 .dropdown-menu {
   border: white 2px solid;
-  border-top: 0;
+  /* border-top: 0; */
   background-color: var(--yellow);
 }
 
 .dropdown-item {
   color: white;
+  background-color: var(--yellow) !important;
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
-  background-color: white;
-  color: var(--yellow);
+  background-color: white !important;
+  color: var(--yellow) !important;
 }
 
 .nav-item {
@@ -163,7 +185,7 @@ button {
     height: calc(var(--nav-height) - 100%);
     left: 50%;
     bottom: calc(100% + 1px); /* + 1px to fix rounding issues */
-    border-right: white 1px solid; /* change color rn */
+    border-right: white 1px solid; /* this is for website nav bar line */
     position: absolute;
     transform: translateY(-100%);
     transition: 0.2s ease;
@@ -537,7 +559,7 @@ svg {
   font-weight: bold;
   border-left: 3px solid;
   padding-left: 7px;
-  color: white;
+  color: var(--yellow);
 }
 
 #spy a.nav-link::before {
@@ -549,7 +571,7 @@ svg {
 }
 
 #spy a.nav-link:hover {
-  border-left: white 2px solid; 
+  border-left: var(--yellow) 2px solid; 
   padding-left: 8px;
 }
 
@@ -615,7 +637,7 @@ svg {
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color: var(--dark);
+  background-color: var(--footer-color);
 }
 
 .bio-hidden {
@@ -623,6 +645,7 @@ svg {
   transition: all 0.3s ease;
   overflow: hidden;
   padding: 0 15px 0 15px;
+  background-color: var(--footer-color);
 }
 
 .bio-hidden p {
@@ -910,20 +933,22 @@ svg {
 /* Style the tab */
 .tab {
   overflow: hidden;
-  background-color: #000000;
+  background-color: var(--yellow);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
-  background-color: #000000;
+  background-color: var(--yellow);
   float: right;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 7px 10px;
   transition: 0.3s;
-  color: #000000;
-  border-right: 1px solid #000000;
+  color: var(--light-blue); /* KH */
+  border-right: 1px solid var(--light-blue);
   line-height: 1px;
 }
 
@@ -966,9 +991,9 @@ svg {
 }
 
 #box {
-  background-color: var(--yellow);
+  background-color: var(--light-blue);
   padding: 5px;
-  color: #000000;
+  color: var(--yellow);
   font-weight: bold;
   font-size: large;
 }
@@ -1201,4 +1226,8 @@ h1 span{font-weight:normal}
 
 .contact .text-warning:hover {
   color: var(--highlight) !important;
+}
+
+#spy .officer-nav a.nav-link.active:hover {
+  color: var(--yellow);
 }
