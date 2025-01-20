@@ -2,8 +2,8 @@
   --yellow: #2d2d50;
   --light-blue: #c9d1ff;
   --highlight: #279AF1;
-  --muted-white: #bcbcbf;
   --beige: #edede9;
+  --muted-white: #bcbcbf;
   --darker-beige: #d7d9db;
   --footer-color: #1d1d33;
   --dark: #242627;
@@ -664,11 +664,18 @@ svg {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-auto-flow: row dense;
+  background-color: var(--darker-beige);
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 15px;
 }
 
 .timeline-marker {
   grid-row-end: span 2;
   position: relative;
+  color: var(--yellow);
 }
 
 @media (min-width: 576px) {
@@ -719,10 +726,12 @@ svg {
   margin-left: 20px;
   margin-right: 20px;
   line-height: 2.5rem;
+  color: var(--yellow) !important;
+  text-align: right;
 }
 
 .timeline-grid h5 {
-  color: var(--muted-white);
+  color: --var(--yellow);
 }
 
 .timeline-grid h1, .timeline-grid h2, .timeline-grid h3, .timeline-grid h4, .timeline-grid h5, .timeline-grid h6 {
@@ -1079,15 +1088,25 @@ h1 span{font-weight:normal}
 
 
 .btn-outline-warning {
-  color: white; /* New text color */
-  border-color: white; /* New border color */
+  color: white !important; /* New text color */
+  border-color: white !important; /* New border color */
   border-radius: 5px;
+  box-shadow: transparent !important;
 }
 
 .btn-outline-warning:hover {
-  color: var(--yellow); /* Text color on hover */
+  color: white !important; /* Text color on hover */
   background-color: white; /* New background color on hover */
   border-color: white
+}
+
+.btn-outline-warning:focus {
+  box-shadow: transparent;
+}
+
+.btn:focus {
+  outline: none; /* Removes default yellow outline */
+  box-shadow: 0 0 5px var(--muted-white);
 }
 
 #why-pbl {
@@ -1101,12 +1120,13 @@ h1 span{font-weight:normal}
 .white-backg-btn {
   color: white;
   background-color: var(--yellow);
+  outline: white solid 1px;
 }
 
 .white-backg-btn:hover {
   color: var(--yellow);
   background-color: white;
-  outline: var(--yellow) solid 2px;
+  outline: var(--yellow) solid 1px;
 }
 
 .text-warning {
@@ -1230,4 +1250,31 @@ h1 span{font-weight:normal}
 
 #spy .officer-nav a.nav-link.active:hover {
   color: var(--yellow);
+}
+
+.officer-airtable {
+  color: var(--yellow);
+}
+
+.officer-airtable:hover {
+  color: var(--highlight);
+}
+
+.btn-outline-warning:hover {
+  background-color: var(--yellow) !important;
+
+}
+
+.btn-outline-warning:not(:disabled):not(.disabled):active {
+  background-color: var(--yellow) !important;
+  color: white !important;
+  border-color: white !important;
+  box-shadow: transparent;
+}
+
+.btn-outline-warning:not(:disabled):not(.disabled):focus {
+  background-color: var(--yellow) !important;
+  color: white !important;
+  border-color: white !important;
+  box-shadow: transparent;
 }
