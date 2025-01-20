@@ -610,6 +610,9 @@ svg {
   display: block;
   max-height: 100%;
   border-radius: 8px;
+  height: 500px; /* Set the desired height */
+  object-fit: cover; /* Or 'contain' if you want to fit the image without cropping */
+  width: auto; 
 }
 
 .invert-img {
@@ -623,7 +626,7 @@ svg {
   bottom: 0;
   transform: translateY(100%);
   transition: all 0.3s ease;
-  background-color: var(--dark);
+  background-color: var(--footer-color);
   user-select: none;
   text-align: center;
 }
