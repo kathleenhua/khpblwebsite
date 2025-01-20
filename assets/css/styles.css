@@ -241,7 +241,7 @@ main {
 .join-background {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-    url("../img/header/joinusheader.jpg");
+    url("../img/header/joinusheader2.jpg");
   background-position: center;
 }
 
@@ -414,7 +414,9 @@ svg {
 .ourapproach-background {
   background-image:
   linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
-  url("../img/Sam_Kat_CT.jpg");
+  url("../img/ourapproach.jpg");
+  height: auto;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -1249,6 +1251,11 @@ h1 span{font-weight:normal}
 
 .contact .text-warning:hover {
   color: var(--highlight) !important;
+}
+
+.contact img {
+  width: 100%;
+  height: auto;
 }
 
 #spy .officer-nav a.nav-link.active:hover {
